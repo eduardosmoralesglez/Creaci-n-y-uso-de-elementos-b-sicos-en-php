@@ -150,7 +150,11 @@ Prueva de funcionamiento de submodulos
 
 ```php
 <?php
-
+    for ($i=10; $i > 0; $i--) {
+        echo $i;
+        echo "<br>";
+    }
+    echo "Fin!"
 ?>
 ```
 
@@ -159,7 +163,12 @@ Prueva de funcionamiento de submodulos
 
 ```php
 <?php
-
+    $numero = 5;
+    $factorial = 1;
+    for ($i=1; $i < $numero+1; $i++) {
+        $factorial = $factorial * $i;
+    }
+    echo "El factorial $numero! es $factorial";
 ?>
 ```
 
@@ -172,7 +181,32 @@ Prueva de funcionamiento de submodulos
 
 ```php
 <?php
-
+    function esPrimo($num) {
+        if ($num <= 1) {
+            return false;
+        }
+        if ($num == 2) {
+            return true;
+        }
+        if ($num % 2 == 0) {
+            return false;
+        }
+        for ($i = 3; $i <= sqrt($num); $i += 2) {
+            if ($num % $i == 0) {
+                return false;
+            }
+        }
+        return true; 
+    }
+    $numerosPrimos = [];
+    for ($i=0; $i < 51; $i++) { 
+        if (esPrimo($i)) {
+            array_push($numerosPrimos,$i);
+        }
+    }
+    foreach ($numerosPrimos as $n) {
+        echo $n . " ";
+    }
 ?>
 ```
 
