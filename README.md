@@ -12,7 +12,16 @@ Prueva de funcionamiento de submodulos
 
 ```php
 <?php
-
+    $numero1 = 8;
+    $numero2 = 8;
+    $respuesta = "El mayor es $numero1";
+    if ($numero1 < $numero2) {
+        $respuesta = "El mayor es $numero2";
+    }
+    if ($numero1 == $numero2) {
+        $respuesta = "Los numeros son iguales";
+    }
+    echo $respuesta;
 ?>
 ```
 
@@ -23,7 +32,12 @@ Prueva de funcionamiento de submodulos
 
 ```php
 <?php
-
+    $edad = 18;
+    $respuesta = "Eres menor de edad";
+    if ($edad >= 18) {
+        $respuesta = "Eres mayor de edad";
+    }
+    echo $respuesta;
 ?>
 ```
 
@@ -32,7 +46,15 @@ Prueva de funcionamiento de submodulos
 
 ```php
 <?php
-
+    $numero = 4;
+    $respuesta = "El numero es positivo";
+    if ($numero < 0) {
+        $respuesta = "El numero es negativo";
+    }
+    if ($numero == 0) {
+        $respuesta = "El numero es 0";
+    }
+    echo $respuesta;
 ?>
 ```
 
@@ -42,7 +64,27 @@ Prueva de funcionamiento de submodulos
 
 ```php
 <?php
-
+    $nota = 11;
+    switch ($nota) {
+        case $nota < 5:
+            echo "Suspendido";
+            break;
+        case 5:
+        case 6:
+            echo "Aprobado";
+            break;
+        case 7:
+        case 8:
+            echo "Notable";
+            break;
+        case 9:
+        case 10:
+            echo "Sobresaliente";
+            break;
+        default:
+            echo "ERROR: La nota no solo puede estar entre 0 y 10";
+            break;
+    }
 ?>
 ```
 
@@ -55,7 +97,10 @@ Prueva de funcionamiento de submodulos
 
 ```php
 <?php
-
+    for ($i=1; $i < 101; $i++) { 
+        echo $i;
+        echo "<br>";
+    }
 ?>
 ```
 
@@ -64,7 +109,11 @@ Prueva de funcionamiento de submodulos
 
 ```php
 <?php
-
+    $sumaTotal = 0;
+    for ($i=0; $i < 51; $i++) {
+        $sumaTotal = $sumaTotal + $i;
+    }
+    echo $sumaTotal;
 ?>
 ```
 
@@ -73,7 +122,12 @@ Prueva de funcionamiento de submodulos
 
 ```php
 <?php
-
+    $numero = 7;
+    for ($i=0; $i < 11; $i++) {
+        $multi = $numero*$i;
+        echo "$numero x $i = $multi";
+        echo "<br>";
+    }
 ?>
 ```
 
