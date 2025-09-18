@@ -136,7 +136,12 @@ Prueva de funcionamiento de submodulos
 
 ```php
 <?php
-
+    for ($i=0; $i < 51; $i++) {
+        if ($i % 2 == 0) {
+            echo $i;
+            echo "<br>";
+        }
+    }
 ?>
 ```
 
