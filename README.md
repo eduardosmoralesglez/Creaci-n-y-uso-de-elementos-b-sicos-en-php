@@ -215,6 +215,20 @@ Prueva de funcionamiento de submodulos
 
 ```php
 <?php
+    $fibonacci = [];
+    $a = 0;
+    $b = 1;
+    array_push($fibonacci,$a);
+    array_push($fibonacci,$b);
+    for ($i = 3; $i <= 20; $i++) {
+        $c = $a + $b; 
+        array_push($fibonacci,$c);
+        $a = $b;
+        $b = $c;
+    }
+    foreach ($fibonacci as $n) {
+        echo $n . " ";
+    }
 
 ?>
 ```
@@ -224,7 +238,13 @@ Prueva de funcionamiento de submodulos
 
 ```php
 <?php
-
+$n = 34
+echo "Múltiplos de $n hasta 100: ";
+echo "<br>";
+for ($i = 1; $i * $n <= 100; $i++) {
+    $multiplo = $i * $n;
+    echo $multiplo . " ";
+}
 ?>
 ```
 
@@ -233,7 +253,18 @@ Prueva de funcionamiento de submodulos
 
 ```php
 <?php
-
+$sumaPares = 0;
+$sumaImpares = 0;
+for ($i = 1; $i <= 100; $i++) {
+    if ($i % 2 == 0) {
+        $sumaPares += $i;
+    } else {
+        $sumaImpares += $i;
+    }
+}
+echo "Suma de pares entre 1 y 100: $sumaPares" ;
+echo "<br>"
+echo "Suma de impares entre 1 y 100: $sumaImpares";
 ?>
 ```
 
@@ -243,7 +274,7 @@ Prueva de funcionamiento de submodulos
 
 ```php
 <?php
-
+//a
 ?>
 ```
 
@@ -256,7 +287,18 @@ Prueva de funcionamiento de submodulos
 
 ```php
 <?php
-
+$numero = 6
+$sumaDivisores = 0;
+for ($i = 1; $i < $numero; $i++) {
+    if ($numero % $i == 0) {
+        $sumaDivisores += $i;
+    }
+}
+if ($sumaDivisores == $numero) {
+    echo "$numero es un número PERFECTO";
+} else {
+    echo "$numero NO es un número perfecto";
+}
 ?>
 ```
 
@@ -265,7 +307,17 @@ Prueva de funcionamiento de submodulos
 
 ```php
 <?php
-
+$numero = 15;
+$numeroOriginal = $numero; 
+$invertido = 0;
+while ($numero > 0) {
+    $digito = $numero % 10; 
+    $invertido = $invertido * 10 + $digito; 
+    $numero = intdiv($numero, 10);
+}
+echo "Número original: $numeroOriginal";
+echo "<br>"
+echo "Número invertido: $invertido";
 ?>
 ```
 
@@ -274,7 +326,14 @@ Prueva de funcionamiento de submodulos
 
 ```php
 <?php
-
+$palabra = "Ana";
+$palabra = strtolower($palabra);
+$invertida = strrev($palabra);
+if ($palabra === $invertida) {
+    echo "La palabra '$palabra' es un PALÍNDROMO";
+} else {
+    echo "La palabra '$palabra' NO es un palíndromo";
+}
 ?>
 ```
 
@@ -283,7 +342,14 @@ Prueva de funcionamiento de submodulos
 
 ```php
 <?php
-
+$a = 253;
+$b = 56;
+while ($b != 0) {
+    $resto = $a % $b;
+    $a = $b;
+    $b = $resto;
+}
+echo "El MCD es: $a";
 ?>
 ```
 
@@ -300,7 +366,11 @@ Prueva de funcionamiento de submodulos
 
 ```php
 <?php
-
+$n = 10;
+for ($i = 1; $i <= $n; $i++) {
+    echo str_repeat("*", $i);
+    echo "<br>";
+}
 ?>
 ```
 
